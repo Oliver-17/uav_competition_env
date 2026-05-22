@@ -1,0 +1,126 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="uav_dual_tag_arena">
+    <include><uri>model://sun</uri></include>
+    <include><uri>model://ground_plane</uri></include>
+
+    <model name="wall_north">
+      <static>true</static>
+      <pose>10.5 8.3 4.0 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>25 0.2 8</size></box></geometry></collision>
+        <visual name="visual">
+          <geometry><box><size>25 0.2 8</size></box></geometry>
+          <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/GreyTransparent</name></script></material>
+        </visual>
+      </link>
+    </model>
+    
+    <model name="wall_south">
+      <static>true</static>
+      <pose>10.5 -8.3 4.0 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>25 0.2 8</size></box></geometry></collision>
+        <visual name="visual">
+          <geometry><box><size>25 0.2 8</size></box></geometry>
+          <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/GreyTransparent</name></script></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="wall_east">
+      <static>true</static>
+      <pose>23 0 4.0 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>0.2 16.6 8</size></box></geometry></collision>
+        <visual name="visual">
+          <geometry><box><size>0.2 16.6 8</size></box></geometry>
+          <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/GreyTransparent</name></script></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="wall_west">
+      <static>true</static>
+      <pose>-2 0 4.0 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>0.2 16.6 8</size></box></geometry></collision>
+        <visual name="visual">
+          <geometry><box><size>0.2 16.6 8</size></box></geometry>
+          <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/GreyTransparent</name></script></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="ceiling_limit">
+      <static>true</static>
+      <pose>10.5 0 8.0 0 0 0</pose> 
+      <link name="link">
+        <collision name="collision"><geometry><box><size>25 16.6 0.1</size></box></geometry></collision>
+        <visual name="visual">
+          <geometry><box><size>25 16.6 0.1</size></box></geometry>
+          <material><script><uri>file://media/materials/scripts/gazebo.material</uri><name>Gazebo/GreyTransparent</name></script></material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="pillar_1"><static>true</static><pose>5 0 4.0 0 0 0</pose><link name="link">
+      <collision name="collision"><geometry><cylinder><radius>0.4</radius><length>8.0</length></cylinder></geometry></collision>
+      <visual name="visual"><geometry><cylinder><radius>0.4</radius><length>8.0</length></cylinder></geometry><material><script><name>Gazebo/Grey</name></script></material></visual>
+    </link></model>
+
+    <model name="pillar_2"><static>true</static><pose>9 1.5 4.0 0 0 0</pose><link name="link">
+      <collision name="collision"><geometry><cylinder><radius>0.4</radius><length>8.0</length></cylinder></geometry></collision>
+      <visual name="visual"><geometry><cylinder><radius>0.4</radius><length>8.0</length></cylinder></geometry><material><script><name>Gazebo/Grey</name></script></material></visual>
+    </link></model>
+
+    <model name="pillar_3"><static>true</static><pose>9 -1.5 4.0 0 0 0</pose><link name="link">
+      <collision name="collision"><geometry><cylinder><radius>0.4</radius><length>8.0</length></cylinder></geometry></collision>
+      <visual name="visual"><geometry><cylinder><radius>0.4</radius><length>8.0</length></cylinder></geometry><material><script><name>Gazebo/Grey</name></script></material></visual>
+    </link></model>
+
+    <model name="pillar_4"><static>true</static><pose>13 0 4.0 0 0 0</pose><link name="link">
+      <collision name="collision"><geometry><cylinder><radius>0.4</radius><length>8.0</length></cylinder></geometry></collision>
+      <visual name="visual"><geometry><cylinder><radius>0.4</radius><length>8.0</length></cylinder></geometry><material><script><name>Gazebo/Grey</name></script></material></visual>
+    </link></model>
+
+    <model name="pillar_5"><static>true</static><pose>16 2.0 4.0 0 0 0</pose><link name="link">
+      <collision name="collision"><geometry><cylinder><radius>0.4</radius><length>8.0</length></cylinder></geometry></collision>
+      <visual name="visual"><geometry><cylinder><radius>0.4</radius><length>8.0</length></cylinder></geometry><material><script><name>Gazebo/Grey</name></script></material></visual>
+    </link></model>
+
+    <model name="pillar_6"><static>true</static><pose>16 -2.0 4.0 0 0 0</pose><link name="link">
+      <collision name="collision"><geometry><cylinder><radius>0.4</radius><length>8.0</length></cylinder></geometry></collision>
+      <visual name="visual"><geometry><cylinder><radius>0.4</radius><length>8.0</length></cylinder></geometry><material><script><name>Gazebo/Grey</name></script></material></visual>
+    </link></model>
+
+    <model name="pillar_7"><static>true</static><pose>18 0 4.0 0 0 0</pose><link name="link">
+      <collision name="collision"><geometry><cylinder><radius>0.4</radius><length>8.0</length></cylinder></geometry></collision>
+      <visual name="visual"><geometry><cylinder><radius>0.4</radius><length>8.0</length></cylinder></geometry><material><script><name>Gazebo/Grey</name></script></material></visual>
+    </link></model>
+
+    <model name="start_pad">
+      <static>true</static>
+      <pose>0 0 0.01 0 0 0</pose>
+      <link name="link">
+        <visual name="visual">
+          <geometry><box><size>1.0 1.0 0.01</size></box></geometry>
+          <material><script><name>Gazebo/Green</name></script></material>
+        </visual>
+      </link>
+    </model>
+
+    <include>
+      <uri>model://apriltag_pad</uri>
+      <name>apriltag_ground</name>
+      <pose>20.0 0.0 0.01 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://apriltag_wall_pad</uri>
+      <name>apriltag_wall</name>
+      <pose>22.89 0.0 2.5 0 -1.5708 0</pose>
+    </include>
+
+  </world>
+</sdf>
