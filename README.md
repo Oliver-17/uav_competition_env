@@ -1,1 +1,1 @@
-![UAV Arena Preview](images/arena_preview.png)
+![UAV Arena Preview](images/arena_preview.jpg)
